@@ -1,0 +1,42 @@
+{
+	"database": {
+		"default": {
+			"host": "127.0.0.1",
+			"port": "3306",
+			"user": "root",
+			"pwd": "root",
+			"name": "goadmin",
+			"max_idle_con": 5,
+			"max_open_con": 10,
+			"driver": "mysql"
+		}
+	},
+	"app_id": "lWcJLKcQYP78",
+	"language": "en",
+	"prefix": "admin",
+	"theme": "adminlte",
+	"store": {
+		"path": "./uploads",
+		"prefix": "uploads"
+	},
+	"title": "GoAdmin",
+	"logo": "GoAdmin",
+	"mini_logo": "GA",
+	"index": "/",
+	"login_url": "/login",
+	"debug": true,
+	"env": "local",
+	"info_log": "./logs/info.log",
+	"error_log": "./logs/error.log",
+	"access_log": "./logs/access.log",
+	"color_scheme": "skin-black",
+	"session_life_time": 7200,
+	"file_upload_engine": {
+		"name": "local"
+	},
+	"login_title": "GoAdmin",
+	"login_logo": "GoAdmin",
+	"auth_user_table": "goadmin_users",
+	"bootstrap_file_path": "./bootstrap.go",
+	"asset_root_path": "./public/"
+}
