@@ -5,6 +5,7 @@
 package auth
 
 import (
+	"fmt"
 	"sync"
 
 	"github.com/GoAdminGroup/go-admin/modules/db/dialect"
@@ -89,9 +90,11 @@ func (s *TokenService) Name() string {
 }
 
 func InitCSRFTokenSrv(conn db.Connection) (string, service.Service) {
-	list, err := db.WithDriver(conn).Table("goadmin_session").
-		Where("values", "=", "__csrf_token__").
-		All()
+	sql := db.WithDriver(conn).Table("goadmin_session").
+		Where("values", "=", "__csrf_token__")
+	fmt.Println(sql.Statement)
+	list, err := sql.All()
+
 	if db.CheckError(err, db.QUERY) {
 		logger.Error("csrf token query from database error: ", err)
 	}

@@ -2,9 +2,9 @@ package main
 
 import (
 	"github.com/GoAdminGroup/go-admin/engine"
+	"github.com/GoAdminGroup/go-admin/models2"
 	"github.com/GoAdminGroup/go-admin/template"
 	"github.com/GoAdminGroup/go-admin/template/chartjs"
-	"github.com/GoAdminGroup/go-admin/tests/tables"
 	"github.com/gin-gonic/gin"
 	"io/ioutil"
 	"log"
@@ -31,7 +31,7 @@ func startServer() {
 	eng := engine.Default()
 
 	if err := eng.AddConfigFromJSON("./config.json").
-		AddGenerators(tables.Generators).
+		AddGenerators(models.Generators).
 		Use(r)
 		err != nil {
 		panic(err)
@@ -47,6 +47,3 @@ func startServer() {
 	log.Print("closing database connection")
 	eng.MysqlConnection().Close()
 }
-
-
-

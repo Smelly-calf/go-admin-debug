@@ -99,7 +99,7 @@ func (h *Handler) showTableData(ctx *context.Context, prefix string, params para
 }
 
 func (h *Handler) showTable(ctx *context.Context, prefix string, params parameter.Parameters, panel table.Table) *bytes.Buffer {
-
+	logger.Debug("=====showTable params:\n", params)
 	panel, panelInfo, urls, err := h.showTableData(ctx, prefix, params, panel, "")
 	if err != nil {
 		return h.Execute(ctx, auth.Auth(ctx),
@@ -120,7 +120,7 @@ func (h *Handler) showTable(ctx *context.Context, prefix string, params paramete
 	}
 
 	editUrl, newUrl, deleteUrl, exportUrl, detailUrl, infoUrl,
-		updateUrl := urls[0], urls[1], urls[2], urls[3], urls[4], urls[5], urls[6]
+	updateUrl := urls[0], urls[1], urls[2], urls[3], urls[4], urls[5], urls[6]
 
 	var (
 		body      template2.HTML

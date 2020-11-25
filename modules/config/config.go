@@ -1078,7 +1078,8 @@ func GetCustom403HTML() template.HTML {
 }
 
 func GetTheme() string {
-	return globalCfg.Theme
+	return "adminlte"
+	//return globalCfg.Theme
 }
 
 func GetStore() Store {

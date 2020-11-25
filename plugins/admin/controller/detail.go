@@ -16,7 +16,7 @@ import (
 )
 
 func (h *Handler) ShowDetail(ctx *context.Context) {
-
+	fmt.Println("==========> show detail...")
 	var (
 		prefix    = ctx.Query(constant.PrefixKey)
 		id        = ctx.Query(constant.DetailPKKey)

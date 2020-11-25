@@ -118,6 +118,7 @@ func (tb *DefaultTable) GetData(params parameter.Parameters) (PanelInfo, error) 
 		}
 	}
 
+	// 获取 Table data 的地方
 	if tb.getDataFun != nil {
 		data, size = tb.getDataFun(params)
 	} else if tb.sourceURL != "" {
@@ -127,7 +128,7 @@ func (tb *DefaultTable) GetData(params parameter.Parameters) (PanelInfo, error) 
 	} else if params.IsAll() {
 		return tb.getAllDataFromDatabase(params)
 	} else {
-		return tb.getDataFromDatabase(params)
+		return tb.getDataFromDatabase(params)  //  默认走这里
 	}
 
 	infoList := make(types.InfoList, 0)

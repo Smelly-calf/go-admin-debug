@@ -3,6 +3,7 @@ module github.com/GoAdminGroup/go-admin
 go 1.13
 
 require (
+	git.jd.com/jdolap/adminserver v0.0.0-20201125095906-8ce6e81f20f0
 	github.com/360EntSecGroup-Skylar/excelize v1.4.1
 	github.com/AlecAivazis/survey/v2 v2.2.3
 	github.com/GoAdminGroup/html v0.0.1
@@ -18,9 +19,10 @@ require (
 	github.com/go-sql-driver/mysql v1.5.0
 	github.com/gobuffalo/buffalo v0.16.17
 	github.com/gogf/gf v1.14.4
-	github.com/gorilla/mux v1.7.4
+	github.com/gorilla/mux v1.8.0
 	github.com/imkira/go-interpol v1.1.0 // indirect
 	github.com/jawher/mow.cli v1.2.0
+	github.com/jinzhu/gorm v1.9.16 // indirect
 	github.com/jteeuwen/go-bindata v3.0.7+incompatible
 	github.com/k0kubun/colorstring v0.0.0-20150214042306-9440f1994b88 // indirect
 	github.com/kataras/iris/v12 v12.1.8
@@ -34,7 +36,7 @@ require (
 	github.com/satori/go.uuid v1.2.0
 	github.com/schollz/progressbar v1.0.0
 	github.com/sclevine/agouti v3.0.0+incompatible
-	github.com/stretchr/testify v1.5.1
+	github.com/stretchr/testify v1.6.1
 	github.com/tdewolff/minify v2.3.6+incompatible
 	github.com/tdewolff/parse v2.3.4+incompatible // indirect
 	github.com/tdewolff/test v1.0.6 // indirect
@@ -49,6 +51,6 @@ require (
 	golang.org/x/text v0.3.3
 	gopkg.in/ini.v1 v1.51.1
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0 // indirect
-	gopkg.in/yaml.v2 v2.2.8
+	gopkg.in/yaml.v2 v2.3.0
 	xorm.io/xorm v1.0.2
 )

@@ -13,3 +13,7 @@ logs
 adm/build
 template/login/assets/login
 uploads
+data/db/account.sql
+data/db/business.sql
+data/db/cluster.sql
+Jenkinsfile

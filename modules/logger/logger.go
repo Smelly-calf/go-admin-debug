@@ -5,6 +5,7 @@
 package logger
 
 import (
+	"fmt"
 	"os"
 	"path/filepath"
 	"strconv"
@@ -319,6 +320,8 @@ func Panicf(template string, args ...interface{}) {
 
 // Access print the access message.
 func Access(ctx *context.Context) {
+	logger.Level = -1
+	fmt.Println(logger.Level)
 	if !logger.accessLogOff && logger.Level <= zapcore.InfoLevel {
 		temp := "[GoAdmin] %s %s %s"
 		if logger.accessAssetsLogOff {
